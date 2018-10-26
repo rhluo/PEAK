@@ -6,12 +6,21 @@ import it.uniroma1.lcl.adw.comparison.WeightedOverlap;
 import it.uniroma1.lcl.jlt.Configuration;
 import sun.plugin2.liveconnect.JSExceptions;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
+
 public class testADW {
 
     public static void main(String args[]) throws Exception {
         //the two lexical items to be compared
         String text1 = "a mill that is powered by the wind";
         String text2 = "windmill.n.1";
+
+        File file=new File("conf/config.properties");
+        System.out.println(file.getAbsolutePath());
+        System.out.println(System.getProperty("user.dir"));
+
 
         //types of the two lexical items
         LexicalItemType srcTextType = LexicalItemType.SURFACE;
